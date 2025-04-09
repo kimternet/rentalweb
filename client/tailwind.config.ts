@@ -1,9 +1,14 @@
-const config = {
+import type { Config } from "tailwindcss";
+const config: Config = {
   darkMode: ["class"],
   content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+	"./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
   	extend: {
@@ -19,6 +24,8 @@ const config = {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))',
   				'50': '#fcfcfc',
   				'100': '#f1f1f2',
   				'200': '#e0e0e2',
@@ -32,6 +39,8 @@ const config = {
   				'950': '#000000'
   			},
   			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				foreground: 'hsl(var(--secondary-foreground))',
   				'50': '#fefcfc',
   				'100': '#fdf2f2',
   				'200': '#fae1e1',
