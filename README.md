@@ -5,5 +5,5 @@
 
 ### 4월9일 시작
 랜딩페이지, 버튼 기능, 검색 기능 추가</br>
-에러 : tailwind css 설정 문제, 버전 호환, content 경로 설정 문제
-해결 : mjs -> js, tailwind css 버전 다운그레이드, 경로 설정 변경
+에러 : tailwind css 설정 문제, 버전 호환, content 경로 설정 문제</br>
+해결 : mjs -> js, tailwind css 버전 다운그레이드, 경로 설정 변경</br>
