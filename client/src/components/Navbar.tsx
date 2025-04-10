@@ -25,9 +25,9 @@ const Navbar = () => {
                       className="w-6 h-6"
                     />
                     <div className="text-xl font-bold">
-                        RENT
+                        RENTAL
                         <span className="text-secondary-500 font-light hover:!text-primary-300">
-                            APARTMENT
+                            APTMENT
                         </span>                    
                     </div>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             </Link>
         </div>
             <p className="text-primary-200 hidden md:block">
-                풀스택 개발자 포트폴리오
+                풀스택 포트폴리오
             </p>
             <div className="flex items-center gap-5">
                 <Link href="/signin">
