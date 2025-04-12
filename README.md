@@ -7,3 +7,16 @@
 랜딩페이지, 버튼 기능, 검색 기능 추가</br>
 에러 : tailwind css 설정 문제, 버전 호환, content 경로 설정 문제</br>
 해결 : mjs -> js, tailwind css 버전 다운그레이드, 경로 설정 변경</br>
+
+### 4월10일
+NEXT.JS 캐싱 문제
+
+### 4월11일
+TypeScript 설정의 이해와 중요성
+TS 백엔드 package.json 설정
+prisma 활용
+
+### 4월12일
+AWS cognito
+amplify 인증 설정
+인증 흐름 최적화하기
