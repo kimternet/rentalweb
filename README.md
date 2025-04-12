@@ -9,14 +9,14 @@
 해결 : mjs -> js, tailwind css 버전 다운그레이드, 경로 설정 변경</br>
 
 ### 4월10일
-NEXT.JS 캐싱 문제
+NEXT.JS 캐싱 문제</br>
 
 ### 4월11일
-TypeScript 설정의 이해와 중요성
-TS 백엔드 package.json 설정
-prisma 활용
+TypeScript 설정의 이해와 중요성</br>
+TS 백엔드 package.json 설정</br>
+prisma 활용</br>
 
 ### 4월12일
-AWS cognito
-amplify 인증 설정
-인증 흐름 최적화하기
+AWS cognito</br>
+amplify 인증 설정</br>
+인증 흐름 최적화하기</br>
