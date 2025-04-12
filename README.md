@@ -20,3 +20,5 @@ prisma 활용</br>
 AWS cognito</br>
 amplify 인증 설정</br>
 인증 흐름 최적화하기</br>
+![image](https://github.com/user-attachments/assets/8c468005-d22f-497a-8869-5d0a03bd043d)
+![image](https://github.com/user-attachments/assets/0e20122e-bcf9-4ba1-a1a6-a9878340a805)
