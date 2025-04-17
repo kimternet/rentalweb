@@ -5,34 +5,24 @@ import { NAVBAR_HEIGHT } from '@/lib/constants'
 import { useGetAuthUserQuery } from '@/state/api';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 const Layout = ({ children } : { children:React.ReactNode }) => {
-  
-
-  const { data: authUser, isLoading: authLoading } = useGetAuthUserQuery();
+  const { data: authUser } = useGetAuthUserQuery();
   const router = useRouter();
   const pathname = usePathname();
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (authUser) {
-        const userRole = authUser.userRole?.toLowerCase();
-        if (
-            (userRole === "manager" && pathname.startsWith("/search")) ||
-            (userRole === "tenant" && pathname === "/")
-        ) {
-           router.push(
-            "/managers/properties",
-            { scroll: false }
-           );
-        } else {
-            setIsLoading(false);
-        }
+    if (!authUser) return;
+
+    const userRole = authUser.userRole?.toLowerCase();
+    if (
+      (userRole === "manager" && pathname.startsWith("/search")) ||
+      (userRole === "tenant" && pathname === "/")
+    ) {
+      router.push("/managers/properties");
     }
   }, [authUser, router, pathname]);
-
-  if (authLoading || isLoading) return <>Loading...</>
 
   return (
     <div className="h-full w-full">

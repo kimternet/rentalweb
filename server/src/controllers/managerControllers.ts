@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
 
 
+
 const prisma = new PrismaClient();
 
 export const getManager = async (req: Request, res: Response): Promise<void> => {
@@ -38,5 +39,26 @@ export const createManager = async (req: Request, res: Response): Promise<void> 
         res.status(201).json(manager);
     } catch (error: any ) {
         res.status(500).json({ message: `Error creating tenant: ${error.message}` });
+    }
+};
+
+export const updateManager = async (req: Request, res: Response): Promise<void> => {
+    try {
+        const { cognitoId } = req.params; 
+        const { name, email, phoneNumber } = req.body;
+
+        
+        const updateManager = await prisma.manager.update({
+            where: { cognitoId },
+            data: {
+                name,
+                email,
+                phoneNumber,
+            },
+        });
+
+        res.json(updateManager);
+    } catch (error: any ) {
+        res.status(500).json({ message: `Error updating manager: ${error.message}` });
     }
 };
