@@ -9,7 +9,7 @@ import { authMiddleware } from "./middleware/authMiddleware";
 /* Route Imports */
 import tenantRoutes from "./routes/tenantRoutes";
 import managerRoutes from "./routes/managerRoutes";
-
+import propertyRoutes from "./routes/propertyRoutes";
 
 
 /* CONFIGURATIONS */
@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
     res.send("home route");
 });
 
+app.use("/properties", propertyRoutes);
 app.use("/tenents", authMiddleware(["tenant"]), tenantRoutes);
 app.use("/managers", authMiddleware(["manager"]), managerRoutes);
 
