@@ -8,7 +8,7 @@
 에러 : tailwind css 설정 문제, 버전 호환, content 경로 설정 문제</br>
 해결 : mjs -> js, tailwind css 버전 다운그레이드, 경로 설정 변경</br>
 
-### 4월10일
+### 4월10일.
 NEXT.JS 캐싱 문제</br>
 
 ### 4월11일
